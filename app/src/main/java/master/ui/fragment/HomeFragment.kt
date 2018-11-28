@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import master.ui.R
@@ -30,11 +31,23 @@ class HomeFragment : Fragment() {
     }
 
     private fun setListener(view: View){
+        val navigation = view.findViewById<Button>(R.id.navigation)
+        navigation.setOnClickListener {
+            Toast.makeText(activity, "整个Demo都采用单个activity的navigation方式实现", Toast.LENGTH_SHORT).show()
+        }
+
         val dataBinding = view.findViewById<Button>(R.id.data_binding)
         dataBinding.setOnClickListener {
             NavHostFragment
                 .findNavController(this)
                 .navigate(R.id.databindingFragment)
+        }
+
+        val lifeCycles = view.findViewById<Button>(R.id.life_cycles)
+        lifeCycles.setOnClickListener {
+            NavHostFragment
+                .findNavController(this)
+                .navigate(R.id.lifeCyclesFragment)
         }
     }
 

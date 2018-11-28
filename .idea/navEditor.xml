@@ -86,8 +86,20 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="215" />
-                            <option name="y" value="-128" />
+                            <option name="x" value="235" />
+                            <option name="y" value="-149" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="lifeCyclesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="241" />
+                            <option name="y" value="143" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -117,6 +129,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_nav_home_to_databindingFragment4">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_nav_home_to_lifeCyclesFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

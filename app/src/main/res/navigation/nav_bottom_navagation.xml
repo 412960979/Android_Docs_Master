@@ -8,6 +8,7 @@
             android:label="@string/title_home"
             tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_nav_home_to_databindingFragment4" app:destination="@id/databindingFragment"/>
+        <action android:id="@+id/action_nav_home_to_lifeCyclesFragment" app:destination="@id/lifeCyclesFragment"/>
     </fragment>
     <fragment
             android:id="@+id/nav_dashboard"
@@ -27,6 +28,10 @@
             android:label="@string/title_me"
             tools:layout="@layout/fragment_me">
     </fragment>
+
     <fragment android:id="@+id/databindingFragment" android:name="master.ui.fragment.DatabindingFragment"
-              android:label="databinding" tools:layout="@layout/fragment_databinding"/>
+              android:label="Databinding" tools:layout="@layout/fragment_databinding"/>
+
+    <fragment android:id="@+id/lifeCyclesFragment" android:name="master.ui.fragment.LifeCyclesFragment"
+              android:label="LifeCycles" tools:layout="@layout/fragment_life_cycles"/>
 </navigation>
