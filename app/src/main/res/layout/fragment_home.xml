@@ -1,14 +1,93 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="master.ui.fragment.HomeFragment">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="master.ui.fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="home"
-            android:gravity="center"/>
 
-</FrameLayout>
+    <Button
+            android:text="DataBinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/data_binding" app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="DataBinding" android:layout_marginLeft="40dp" android:layout_marginStart="40dp"
+
+            android:textAllCaps="false"/>
+    <Button
+            android:text="Navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/navigation" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="48dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.522"
+            tools:text="Navigation"
+            android:textAllCaps="false"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline" app:layout_constraintGuide_begin="192dp"
+                                          android:orientation="vertical"/>
+    <Button
+            android:text="LiveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/live_data" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/navigation" app:layout_constraintHorizontal_bias="0.409"
+            tools:text="LiveData"
+            android:textAllCaps="false"/>
+    <Button
+            android:text="LifeCycles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/life_cycles" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/data_binding"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.486" tools:text="LifeCycles"
+            android:textAllCaps="false"/>
+    <Button
+            android:text="Paging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/paging" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@+id/live_data" app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.409" tools:text="Paging"
+            android:textAllCaps="false"/>
+    <Button
+            android:text="Room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/room" tools:text="Room" app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@+id/life_cycles" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.409"
+            android:textAllCaps="false"/>
+    <Button
+            android:text="ViewModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_model" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/paging" app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            tools:text="ViewModel"
+            android:textAllCaps="false"/>
+    <Button
+            android:text="WorkManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/work_manager" tools:text="WorkManager"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/room" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.608"
+            android:textAllCaps="false"/>
+</android.support.constraint.ConstraintLayout>

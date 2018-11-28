@@ -1,22 +1,21 @@
 package master.ui.fragment
 
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.fragment.NavHostFragment
-import kotlinx.android.synthetic.main.fragment_home.*
 import master.ui.R
+import master.ui.databinding.FragmentDatabindingBinding
+import master.ui.model.Teacher
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class DatabindingFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
@@ -29,22 +28,15 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun setListener(view: View){
-        val dataBinding = view.findViewById<Button>(R.id.data_binding)
-        dataBinding.setOnClickListener {
-            NavHostFragment
-                .findNavController(this)
-                .navigate(R.id.databindingFragment)
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view = inflater.inflate(R.layout.fragment_home, container, false)
-        setListener(view)
-        return view
+        // Inflate the layout for this fragment
+//        val viewDataBinding = activity?.let { DataBindingUtil.setContentView<FragmentDatabindingBinding>(it, R.layout.fragment_databinding) } //activity写法
+        val viewDataBinding = DataBindingUtil.inflate<FragmentDatabindingBinding>(inflater, R.layout.fragment_databinding, container, false)
+        viewDataBinding?.teacher = Teacher("孤鸿寡", 30)
+        return viewDataBinding?.root
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -74,7 +66,7 @@ class HomeFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            DatabindingFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

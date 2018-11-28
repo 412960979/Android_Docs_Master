@@ -1,13 +1,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            app:startDestination="@id/nav_home"
-            android:id="@+id/nav_home">
+            app:startDestination="@id/nav_home">
     <fragment
             android:id="@+id/nav_home"
             android:name="master.ui.fragment.HomeFragment"
             android:label="@string/title_home"
             tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_nav_home_to_databindingFragment4" app:destination="@id/databindingFragment"/>
     </fragment>
     <fragment
             android:id="@+id/nav_dashboard"
@@ -27,4 +27,6 @@
             android:label="@string/title_me"
             tools:layout="@layout/fragment_me">
     </fragment>
+    <fragment android:id="@+id/databindingFragment" android:name="master.ui.fragment.DatabindingFragment"
+              android:label="databinding" tools:layout="@layout/fragment_databinding"/>
 </navigation>
