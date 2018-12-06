@@ -15,6 +15,9 @@ import master.ui.model.Teacher
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
+/**
+ * DataBinding, LiveData, ViewMode
+ */
 class DatabindingFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null

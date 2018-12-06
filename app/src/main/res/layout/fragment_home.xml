@@ -29,6 +29,7 @@
             android:textAllCaps="false" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="@+id/guideline2" android:layout_marginLeft="8dp"
             app:layout_constraintHorizontal_bias="0.0"/>
+
     <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                           android:id="@+id/guideline" app:layout_constraintGuide_begin="192dp"
                                           android:orientation="vertical"/>
